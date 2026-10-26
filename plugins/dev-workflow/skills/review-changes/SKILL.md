@@ -1,6 +1,6 @@
 ---
 name: review-changes
-description: Reviews code changes on three separate axes — correctness (bugs, edge cases, security), standards (my clean-code rules, code smells, repo conventions), and plan conformance (against the plan in the repo's docs/plan directory) — using parallel reviewers, then reports them side by side with a verdict. Use when the user asks to review their changes, a branch, a PR, or work in progress, or before committing or opening a PR.
+description: Reviews code changes on three separate axes — correctness (bugs, edge cases, security), standards (the writing-clean-javascript rules, code smells, repo conventions), and plan conformance (against the plan in the repo's docs/plan directory) — using parallel reviewers, then reports them side by side with a verdict. Use when the user asks to review their changes, a branch, a PR, or work in progress, or before committing or opening a PR.
 allowed-tools: Bash(git status *) Bash(git diff *) Bash(git log *) Bash(git branch *) Bash(git rev-parse *) Bash(git merge-base *) Bash(git ls-files *) Bash(${CLAUDE_SKILL_DIR}/../plan-changes/scripts/find-plan.sh *)
 ---
 
@@ -12,7 +12,7 @@ reviewer subagent running in parallel:
 | Axis | Question | Reviewer instructions |
 |---|---|---|
 | **Correctness** | Does the code work? Bugs, edge cases, security, breaking changes | `references/correctness-reviewer.md` |
-| **Standards** | Does it follow my rules, avoid code smells, and match the repo's conventions? | `references/standards-reviewer.md` |
+| **Standards** | Does it follow the writing-clean-javascript rules, avoid code smells, and match the repo's conventions? | `references/standards-reviewer.md` |
 | **Plan** | Does it do what the plan in `docs/plan/` asked — no more, no less? | `references/plan-reviewer.md` |
 
 The axes stay separate on purpose: code can follow every standard and still
@@ -74,7 +74,7 @@ List, without reading in depth:
   `docs/*standard*`, `docs/*convention*`, and similar.
 - Tooling config: `biome.json(c)`, ESLint config, Prettier config,
   `tsconfig*.json`.
-- My personal standards (always included):
+- The writing-clean-javascript standards (always included):
   - `${CLAUDE_SKILL_DIR}/../writing-clean-javascript/SKILL.md`
   - `${CLAUDE_SKILL_DIR}/../writing-clean-javascript/references/conventions.md`
   - `${CLAUDE_SKILL_DIR}/../writing-clean-javascript/references/code-smells.md`

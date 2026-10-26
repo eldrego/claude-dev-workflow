@@ -1,12 +1,12 @@
 ---
 name: writing-clean-javascript
-description: Applies my JavaScript/TypeScript clean-code conventions whenever writing or changing JS/TS code (Node, React, Express, browser, microfrontends). Use for any task that edits .js/.jsx/.ts/.tsx files — implementing features or setups, fixing bugs, creating or changing functions, components, hooks, state stores (Zustand, Redux), routes, services, configs, modules, or tests (Vitest, Jest, Playwright), refactoring or tidying existing code, and reviewing code quality — even if the user doesn't mention clean code or style.
+description: Applies opinionated JavaScript/TypeScript clean-code conventions whenever writing or changing JS/TS code (Node, React, Express, browser, microfrontends). Use for any task that edits .js/.jsx/.ts/.tsx files — implementing features or setups, fixing bugs, creating or changing functions, components, hooks, state stores (Zustand, Redux), routes, services, configs, modules, or tests (Vitest, Jest, Playwright), refactoring or tidying existing code, and reviewing code quality — even if the user doesn't mention clean code or style.
 ---
 
 # Writing clean JavaScript
 
 Apply these conventions to all JavaScript/TypeScript you write or modify.
-They reflect this developer's preferences; follow them over general defaults.
+They are opinionated; follow them over general defaults.
 
 ## Workflow
 
