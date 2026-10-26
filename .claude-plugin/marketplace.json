@@ -1,0 +1,12 @@
+{
+  "name": "dev-workflow",
+  "owner": { "name": "eldrego" },
+  "plugins": [
+    {
+      "name": "dev-workflow",
+      "source": "./plugins/dev-workflow",
+      "description": "Plan, write, review and commit: epic and ticket planning, clean JS/TS conventions, three-axis code review, and Conventional Commits.",
+      "version": "1.0.0"
+    }
+  ]
+}

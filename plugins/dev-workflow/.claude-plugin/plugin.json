@@ -1,0 +1,9 @@
+{
+  "name": "dev-workflow",
+  "version": "1.0.0",
+  "description": "Plan, write, review and commit: epic and ticket planning, clean JS/TS conventions, three-axis code review, and Conventional Commits.",
+  "author": { "name": "eldrego" },
+  "repository": "https://github.com/eldrego/claude-dev-workflow",
+  "license": "MIT",
+  "keywords": ["planning", "code-review", "conventional-commits", "javascript", "typescript"]
+}
