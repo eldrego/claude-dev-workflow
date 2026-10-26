@@ -1,6 +1,11 @@
 {
   "name": "dev-workflow",
-  "owner": { "name": "eldrego" },
+  "owner": {
+    "name": "eldrego"
+  },
+  "metadata": {
+    "description": "Claude Code skills for planning, writing, reviewing and committing code."
+  },
   "plugins": [
     {
       "name": "dev-workflow",
