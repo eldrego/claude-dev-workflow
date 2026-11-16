@@ -1,32 +1,25 @@
-# claude-dev-workflow
+# claude-dev-workflow (archived)
 
-A Claude Code plugin for the full loop of a change: **plan → write → review → commit**.
+**This repo has moved.** The skills are now part of **devflow**:
 
-| Skill | What it does |
-|---|---|
-| `plan-epic` | Breaks an epic, PRD or TDD into tickets, each with a branch name and a stub plan in `docs/plan/<epic>/`. |
-| `plan-changes` | Plans one ticket for the current branch, has a critic check it for gaps and breaking changes, and saves it to `docs/plan/`. |
-| `writing-clean-javascript` | Opinionated JS/TS conventions (Node, React, Express, tests), plus lint and test-config helpers. The project's own config always wins. |
-| `review-changes` | Reviews changes on three separate axes (correctness, standards, plan conformance) with parallel reviewers. |
-| `commit-changes` | Splits work into atomic Conventional Commits and adds the ticket reference from the branch name. |
+- **Free:** [eldrego/devflow-skills](https://github.com/eldrego/devflow-skills)
+  - `devflow-atomic-commits` (was `commit-changes`)
+  - `devflow-clean-js` (was `writing-clean-javascript`)
 
-The skills work alone, and they also work together: `plan-epic` creates stubs that `plan-changes` expands, and `review-changes` checks the code against those plans and the clean-code rules.
+  ```
+  /plugin marketplace add eldrego/devflow-skills
+  /plugin install devflow@devflow
+  ```
 
-## Install
+- **Planning and code review** (`devflow-epic-breakdown`, `devflow-ticket-plan`, `devflow-code-review`, which were `plan-epic`, `plan-changes` and `review-changes`) are available on [Agensi](https://www.agensi.io).
+
+This repo is read-only. Existing installs keep working but won't get updates; to switch, remove the old plugin:
 
 ```
-/plugin marketplace add eldrego/claude-dev-workflow
-/plugin install dev-workflow@dev-workflow
+/plugin uninstall dev-workflow@dev-workflow
+/plugin marketplace remove dev-workflow
 ```
-
-Update later with `/plugin marketplace update dev-workflow`.
-
-## Notes
-
-- Plans are written to `docs/plan/`. Add it to your global gitignore if you don't want plans committed.
-- `commit-changes` reads ticket keys such as `SB-142` or `#123` from the branch name. To limit matches to your Jira keys, run `git config --global commit-changes.ticketKeys "ABC,XYZ"`.
-- The scripts need `bash` and `git`. The lint helper uses Biome and/or ESLint if your project has them.
 
 ## License
 
-MIT
+The code in this repo remains available under the MIT license (see `LICENSE`).
